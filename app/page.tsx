@@ -2,8 +2,11 @@
 import Image from "next/image";
 import ListTodo from "./components/ListTodo";
 import { useState } from "react";
+
+import AddCard from "./components/AddCard";
 export default function Home() {
   const [page, setPage] = useState(1);
+  const [open, setOpen] = useState(false);
   const number = 3
   return (
    <div className="flex items-center h-screen w-full justify-center bg-black">
@@ -14,7 +17,7 @@ export default function Home() {
             <option value="2">Completed</option>
             <option value="3">Incompleted</option>
           </select>
-          <h1 className="text-3xl cursor-pointer hover:rotate-90 duration-300">+</h1>
+          <h1 onClick={() => setOpen(true)} className="text-3xl cursor-pointer hover:rotate-90 duration-300">+</h1>
           </div>
           <div className="flex w-full h-auto flex-wrap bg-gray-600 p-2 rounded-md">
             <ListTodo page={page} />
@@ -33,6 +36,9 @@ export default function Home() {
             <div>Next</div>
           </div>
       </div>
-   </div>
-  );
+      {open && (
+        <AddCard setOpen={setOpen} />
+      )}
+    </div>
+  )
 }
