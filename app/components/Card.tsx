@@ -50,8 +50,8 @@ const Card: React.FC<CardProps> = ({ _id, title, description, date, completed })
               <div className={` p-2 rounded-2xl ${completed ? 'bg-green-500' : 'bg-red-500'} outline-none `}>{completed ? 'Completed' : 'InCompleted'}</div>
           </div>
           <div className='flex justify-between w-[100%] '>
-            <button onClick={handleEdit}>Edit</button>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleEdit} className='cursor-pointer hover:underline '>Edit</button>
+            <button onClick={handleDelete} className='cursor-pointer hover:underline '>Delete</button>
           </div>
         </div>
         {open && (

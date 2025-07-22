@@ -82,7 +82,7 @@ const AddCard: React.FC<AddCardProps> = ({ setOpen, item }) => {
           <div className="bg-gray-700 p-4 rounded-md w-[400px]">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl">{item?._id ? 'Edit Task' : 'Add New Task'}</h2>
-              <button onClick={() => setOpen(false)} className=" bg-red-500 p-2 px-3 rounded-md">X</button>
+              <button onClick={() => setOpen(false)} className=" bg-red-500 p-2 px-3 rounded-md cursor-pointer">X</button>
             </div>
             <div className="flex flex-col gap-2" >
               <input type="text" onChange={(e) => handleChange(e)} value={formData?.title} name='title' placeholder="Task Title" className="mb-2 p-2 rounded-md bg-gray-600 text-white" />
