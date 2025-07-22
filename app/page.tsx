@@ -10,7 +10,7 @@ export default function Home() {
   const number = 3
   return (
    <div className="flex items-center h-screen w-full justify-center bg-black">
-      <div className="flex w-[50%] h-auto flex-col items-start justify-center bg-gray-500 p-2 rounded-md">
+      <div className="flex w-[80%] h-auto flex-col items-start justify-center bg-gray-500 p-2 rounded-md">
           <div className="flex w-full h-auto justify-between p-2 rounded-md">
           <select className="text-black cursor-pointer outline-none bg-gray-600 p-2">
             <option value="1">All Task</option>
@@ -20,7 +20,7 @@ export default function Home() {
           <h1 onClick={() => setOpen(true)} className="text-3xl cursor-pointer hover:rotate-90 duration-300">+</h1>
           </div>
           <div className="flex w-full h-auto flex-wrap bg-gray-600 p-2 rounded-md">
-            <ListTodo page={page} />
+            <ListTodo  page={page} />
           </div>
           <div className="w-full flex items-center gap-4 justify-center">
             <div>Prev</div>
